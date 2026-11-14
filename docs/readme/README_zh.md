@@ -100,13 +100,13 @@ yay -S apiark-bin
 <details>
 <summary><strong>从源码构建</strong></summary>
 
-**前置条件：** Node.js 22+、pnpm 10+、Rust 工具链、[Tauri v2 系统依赖](https://v2.tauri.app/start/prerequisites/)
+**前置条件：** Bun 1.1+、Rust 工具链、[Tauri v2 系统依赖](https://v2.tauri.app/start/prerequisites/)
 
 ```bash
 git clone https://github.com/berbicanes/apiark.git
 cd apiark
-pnpm install
-pnpm tauri build
+bun install
+bun run tauri build
 ```
 </details>
 
@@ -231,16 +231,16 @@ ApiArk 界面通过 `react-i18next` 支持国际化。目前提供**英语**版�
 
 ```bash
 # 安装依赖
-pnpm install
+bun install
 
 # 以开发模式运行
-pnpm tauri dev
+bun run tauri dev
 
 # TypeScript 类型检查
-pnpm -C apps/desktop exec tsc --noEmit
+bun run typecheck
 
 # 构建生产版本
-pnpm tauri build
+bun run tauri build
 ```
 
 ### 项目结构

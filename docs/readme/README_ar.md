@@ -107,13 +107,13 @@ yay -S apiark-bin
 <details>
 <summary><strong>البناء من الشيفرة المصدرية</strong></summary>
 
-**المتطلبات الأساسية:** Node.js 22+، pnpm 10+، أدوات Rust، [متطلبات نظام Tauri v2](https://v2.tauri.app/start/prerequisites/)
+**المتطلبات الأساسية:** Bun 1.1+، أدوات Rust، [متطلبات نظام Tauri v2](https://v2.tauri.app/start/prerequisites/)
 
 ```bash
 git clone https://github.com/berbicanes/apiark.git
 cd apiark
-pnpm install
-pnpm tauri build
+bun install
+bun run tauri build
 ```
 </details>
 
@@ -238,16 +238,16 @@ apiark import postman-export.json
 
 ```bash
 # تثبيت التبعيات
-pnpm install
+bun install
 
 # التشغيل في وضع التطوير
-pnpm tauri dev
+bun run tauri dev
 
 # فحص TypeScript
-pnpm -C apps/desktop exec tsc --noEmit
+bun run typecheck
 
 # البناء للإنتاج
-pnpm tauri build
+bun run tauri build
 ```
 
 ### هيكل المشروع

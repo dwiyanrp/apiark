@@ -100,13 +100,13 @@ yay -S apiark-bin
 <details>
 <summary><strong>ソースからビルド</strong></summary>
 
-**前提条件：** Node.js 22+、pnpm 10+、Rust ツールチェーン、[Tauri v2 システム依存関係](https://v2.tauri.app/start/prerequisites/)
+**前提条件：** Bun 1.1+、Rust ツールチェーン、[Tauri v2 システム依存関係](https://v2.tauri.app/start/prerequisites/)
 
 ```bash
 git clone https://github.com/berbicanes/apiark.git
 cd apiark
-pnpm install
-pnpm tauri build
+bun install
+bun run tauri build
 ```
 </details>
 
@@ -231,16 +231,16 @@ ApiArk をあなたの言語に翻訳するのを手伝ってください！[`lo
 
 ```bash
 # 依存関係をインストール
-pnpm install
+bun install
 
 # 開発モードで実行
-pnpm tauri dev
+bun run tauri dev
 
 # TypeScript 型チェック
-pnpm -C apps/desktop exec tsc --noEmit
+bun run typecheck
 
 # プロダクションビルド
-pnpm tauri build
+bun run tauri build
 ```
 
 ### プロジェクト構成

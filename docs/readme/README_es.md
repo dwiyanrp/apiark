@@ -103,13 +103,13 @@ yay -S apiark-bin
 <details>
 <summary><strong>Compilar desde el código fuente</strong></summary>
 
-**Requisitos previos:** Node.js 22+, pnpm 10+, toolchain de Rust, [dependencias del sistema para Tauri v2](https://v2.tauri.app/start/prerequisites/)
+**Requisitos previos:** Bun 1.1+, toolchain de Rust, [dependencias del sistema para Tauri v2](https://v2.tauri.app/start/prerequisites/)
 
 ```bash
 git clone https://github.com/berbicanes/apiark.git
 cd apiark
-pnpm install
-pnpm tauri build
+bun install
+bun run tauri build
 ```
 </details>
 
@@ -234,16 +234,16 @@ La interfaz de ApiArk soporta internacionalización a través de `react-i18next`
 
 ```bash
 # Instalar dependencias
-pnpm install
+bun install
 
 # Ejecutar en modo de desarrollo
-pnpm tauri dev
+bun run tauri dev
 
 # Verificación de TypeScript
-pnpm -C apps/desktop exec tsc --noEmit
+bun run typecheck
 
 # Compilar para producción
-pnpm tauri build
+bun run tauri build
 ```
 
 ### Estructura del proyecto

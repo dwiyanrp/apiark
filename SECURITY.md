@@ -57,4 +57,4 @@ ApiArk is designed with security as a core principle:
 - **Capability-based permissions**: Tauri v2 restricts IPC commands per window.
 - **Secret redaction**: Auth tokens are replaced with `[REDACTED]` in history.
 - **Atomic writes**: File saves use write-to-temp + rename to prevent corruption.
-- **Dependency auditing**: `cargo audit` and `pnpm audit` run in CI.
+- **Dependency auditing**: `cargo audit` and `bun audit` run in CI.

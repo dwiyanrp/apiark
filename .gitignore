@@ -1,10 +1,11 @@
 # Dependencies
 node_modules/
-.pnpm-store/
 
 # Build output
 dist/
 target/
+out/
+*.tsbuildinfo
 
 # Environment
 .env

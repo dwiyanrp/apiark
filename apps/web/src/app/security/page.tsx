@@ -45,7 +45,7 @@ const sections = [
     title: "Dependency Auditing",
     items: [
       "cargo audit runs in CI on every pull request, blocking merge on known vulnerabilities.",
-      "pnpm audit runs in CI, blocking on high/critical severity.",
+      "bun audit runs in CI, scanning dependencies for known vulnerabilities.",
       "New dependencies are manually reviewed before adding: license, maintenance, security history.",
     ],
   },

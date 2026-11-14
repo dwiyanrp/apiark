@@ -144,13 +144,13 @@ Also available on the [Microsoft Store](https://apps.microsoft.com/search?query=
 <details>
 <summary><strong>Build from source</strong></summary>
 
-**Prerequisites:** Node.js 22+, pnpm 10+, Rust toolchain, [Tauri v2 system deps](https://v2.tauri.app/start/prerequisites/)
+**Prerequisites:** Bun 1.1+, Rust toolchain, [Tauri v2 system deps](https://v2.tauri.app/start/prerequisites/)
 
 ```bash
 git clone https://github.com/berbicanes/apiark.git
 cd apiark
-pnpm install
-pnpm tauri build
+bun install
+bun run tauri build
 ```
 </details>
 
@@ -273,16 +273,16 @@ Help us translate ApiArk into your language! See the [`locales/`](apps/desktop/s
 
 ```bash
 # Install dependencies
-pnpm install
+bun install
 
 # Run in development mode
-pnpm tauri dev
+bun run tauri dev
 
 # TypeScript check
-pnpm -C apps/desktop exec tsc --noEmit
+bun run typecheck
 
 # Build for production
-pnpm tauri build
+bun run tauri build
 ```
 
 ### Project Structure

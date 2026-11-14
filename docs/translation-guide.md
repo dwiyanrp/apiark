@@ -70,7 +70,7 @@ Keys are nested by feature area. Keep the structure flat within each section.
 
 ```bash
 cd apps/desktop
-pnpm dev
+bun run dev
 ```
 
 Change your system language or add `?lng=es` to test. Verify:

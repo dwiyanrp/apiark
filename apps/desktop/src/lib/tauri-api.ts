@@ -23,7 +23,7 @@ import type {
 // ── Tauri environment detection ──
 
 // window.__TAURI_INTERNALS__ exists only inside the Tauri webview.
-// When running via plain `pnpm dev` in a browser, invoke is unavailable.
+// When running via plain `bun dev` in a browser, invoke is unavailable.
 function isTauri(): boolean {
   return typeof window !== "undefined" && "__TAURI_INTERNALS__" in window;
 }
@@ -32,7 +32,7 @@ let _invoke: typeof import("@tauri-apps/api/core").invoke | undefined;
 
 async function getInvoke() {
   if (!isTauri()) {
-    throw new Error("Not running in Tauri environment. Use `pnpm tauri dev` to run the app.");
+    throw new Error("Not running in Tauri environment. Use `bun run tauri dev` to run the app.");
   }
   if (!_invoke) {
     const mod = await import("@tauri-apps/api/core");

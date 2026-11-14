@@ -100,13 +100,13 @@ Vous souhaitez maintenir un paquet ? [Ouvrez un issue](https://github.com/berbic
 <details>
 <summary><strong>Compiler depuis les sources</strong></summary>
 
-**Prérequis :** Node.js 22+, pnpm 10+, toolchain Rust, [dépendances système Tauri v2](https://v2.tauri.app/start/prerequisites/)
+**Prérequis :** Bun 1.1+, toolchain Rust, [dépendances système Tauri v2](https://v2.tauri.app/start/prerequisites/)
 
 ```bash
 git clone https://github.com/berbicanes/apiark.git
 cd apiark
-pnpm install
-pnpm tauri build
+bun install
+bun run tauri build
 ```
 </details>
 
@@ -231,16 +231,16 @@ Aidez-nous à traduire ApiArk dans votre langue ! Consultez le répertoire [`loc
 
 ```bash
 # Installer les dépendances
-pnpm install
+bun install
 
 # Lancer en mode développement
-pnpm tauri dev
+bun run tauri dev
 
 # Vérification TypeScript
-pnpm -C apps/desktop exec tsc --noEmit
+bun run typecheck
 
 # Compiler pour la production
-pnpm tauri build
+bun run tauri build
 ```
 
 ### Structure du projet

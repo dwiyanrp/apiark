@@ -11,24 +11,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          version: 10
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm lint
+          bun-version: latest
+      - run: bun install --frozen-lockfile
+      - run: bun run lint
       - name: TypeScript check
-        run: pnpm -C apps/desktop exec tsc --noEmit
-      - name: Security audit (npm)
-        run: pnpm audit --audit-level=high
+        run: bun run typecheck
+      - name: Security audit (bun)
+        run: bun audit
         continue-on-error: true
       - name: Accessibility audit (axe-core)
         run: |
           cd apps/desktop
-          npx @axe-core/cli --check-updates false 2>/dev/null || echo "axe-core audit configured (runs with e2e tests)"
+          bunx @axe-core/cli --check-updates false 2>/dev/null || echo "axe-core audit configured (runs with e2e tests)"
 
   check-rust:
     runs-on: ubuntu-latest
